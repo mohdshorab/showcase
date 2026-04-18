@@ -1,6 +1,13 @@
 import type React from "react";
+import Home from "./pages/Home";
+import Header from "./components/Header";
 
 const App: React.FC = () => {
-  return <h1 className="text-2xl text-red-500" >Hello World!</h1>;
+  return (
+    <>
+      <Header />
+      <Home />
+    </>
+  );
 };
 export default App;
