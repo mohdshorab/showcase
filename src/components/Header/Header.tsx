@@ -3,12 +3,7 @@ import { motion } from "framer-motion";
 
 const Header: React.FC = () => {
   return (
-    <motion.header
-      initial={{ y: -100, opacity: 0 }}
-      animate={{ y: 0, opacity: 1 }}
-      transition={{ duration: 0.8, ease: "easeOut" }}
-      className="fixed top-0 left-0 right-0 w-screen flex justify-between items-center px-12 py-5 border-b border-white/10 backdrop-blur-md  "
-    >
+    <header className="fixed top-0 left-0 right-0 w-screen flex justify-between items-center px-12 py-5 border-b border-white/10 backdrop-blur-md">
       <a
         href="/"
         className=" text-lg font-display font-medium uppercase cursor-pointer text-gradient-accent tracking-widest"
@@ -44,7 +39,7 @@ const Header: React.FC = () => {
       >
         Hire Me
       </motion.a>
-    </motion.header>
+    </header>
   );
 };
 
