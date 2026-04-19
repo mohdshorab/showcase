@@ -9,6 +9,7 @@ export interface Personal {
   linkedin: string;
   github: string;
   yearsOfExperience: string;
+  isAvailable: boolean;
 }
 
 export interface About {
@@ -100,14 +101,9 @@ export interface Meta {
   resumeFile: string;
 }
 
-export interface Additional {
-  isAvaialable: boolean;
-}
-
 export interface PortfolioData {
   personal: Personal;
   about: About;
-  additional: Additional;
   skills: Skills;
   experience: Experience[];
   achievements: Achievement[];

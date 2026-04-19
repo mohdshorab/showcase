@@ -4,12 +4,42 @@
   --font-display: "Clash Display", sans-serif;
   --font-body: "Cabinet Grotesk", sans-serif;
   --color-bg-primary: #0a0a0f;
-  --color-text-primary: #f0f0f5;
+
+  --width-portfolio: 1200px;
 
   --color-accent-green: #00ff87;
-  --color-accent-cyan: #603fff;
+  --color-accent-green-dim: rgba(0, 255, 135, 0.15);
+  --color-accent-green-glow: rgba(0, 255, 135, 0.35);
+  --color-accent-green-subtle: rgba(0, 255, 135, 0.07);
+  --color-accent-cyan: #60efff;
+  --color-accent-cyan-dim: rgba(96, 239, 255, 0.15);
+  --color-accent-cyan-subtle: rgba(96, 239, 255, 0.07);
+  --color-accent-red: #ff6b6b;
+  --color-accent-red-dim: rgba(255, 107, 107, 0.12);
+
+  --color-text-primary: #f0f0f5;
+  --color-text-secondary: #8888a0;
+  --color-text-ghost: rgba(240, 240, 245, 0.25);
+  --color-text-body: rgba(180, 180, 200, 0.85);
+  --color-text-onaccent: #000000;
+
   --color-glass: rgba(255, 255, 255, 0.04);
+
+  --shadow-glow-green: 0 0 30px rgba(0, 255, 135, 0.3);
+
   --color-glass-border: rgba(255, 255, 255, 0.08);
+  --color-glass-border-hover: rgba(255, 255, 255, 0.16);
+  --color-glass-border-green: rgba(0, 255, 135, 0.22);
+  --color-glass-border-cyan: rgba(96, 239, 255, 0.22);
+  --color-glass-border-subtle: rgba(255, 255, 255, 0.03);
+
+  --shadow-glow-green: 0 0 30px rgba(0, 255, 135, 0.3);
+  --shadow-glow-green-strong: 0 0 50px rgba(0, 255, 135, 0.5);
+  --shadow-glow-green-subtle: 0 0 12px rgba(0, 255, 135, 0.2);
+  --shadow-glow-green-dot: 0 0 12px #00ff87;
+  --shadow-glow-cyan: 0 0 20px rgba(96, 239, 255, 0.2);
+  --shadow-glow-metric: 0 0 20px rgba(0, 255, 135, 0.4);
+  --shadow-focus-green: 0 0 0 3px rgba(0, 255, 135, 0.4);
 }
 
 @layer base {
@@ -21,7 +51,7 @@
 }
 
 @utility text-gradient-accent {
-  background: linear-gradient(135deg, #00ff87, #60efff);
+  background: linear-gradient(135deg, #00ff87 0%, #2ee6a6 50%, #60efff 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
