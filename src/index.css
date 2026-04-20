@@ -25,8 +25,6 @@
 
   --color-glass: rgba(255, 255, 255, 0.04);
 
-  --shadow-glow-green: 0 0 30px rgba(0, 255, 135, 0.3);
-
   --color-glass-border: rgba(255, 255, 255, 0.08);
   --color-glass-border-hover: rgba(255, 255, 255, 0.16);
   --color-glass-border-green: rgba(0, 255, 135, 0.22);
@@ -40,6 +38,8 @@
   --shadow-glow-cyan: 0 0 20px rgba(96, 239, 255, 0.2);
   --shadow-glow-metric: 0 0 20px rgba(0, 255, 135, 0.4);
   --shadow-focus-green: 0 0 0 3px rgba(0, 255, 135, 0.4);
+
+    --blur-card: 10px;
 }
 
 @layer base {
@@ -55,4 +55,18 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+}
+
+@utility glass-card {
+  background: var(--color-glass);
+  backdrop-filter: blur(var(--blur-card));
+  border: 1px solid var(--color-glass-border);
+  border-radius: var(--radius-2xl);
+}
+
+@utility bg-grid-lines {
+  background-image:
+    linear-gradient(rgba(255,255,255,0.025) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.025) 1px, transparent 1px);
+  background-size: 60px 60px;
 }

@@ -10,7 +10,7 @@ const NAV_LINKS = [
 
 const Header: React.FC = () => {
   return (
-    <header className="fixed top-0 left-0 right-0 w-screen flex justify-between items-center px-12 py-5 border-b border-white/10 backdrop-blur-md">
+    <header className="fixed top-0 left-0 right-0 w-screen flex justify-between items-center px-12 py-5 border-b border-white/10 bg-bg-primary/50  backdrop-blur-2xl z-50">
       <a
         href="/"
         className=" text-lg font-display font-medium uppercase cursor-pointer text-gradient-accent tracking-widest"
@@ -23,7 +23,7 @@ const Header: React.FC = () => {
             <li key={skill.label}>
               <a
                 href={skill.href}
-                className="group relative text-xs uppercase tracking-widest text-white/70 hover:text-white transition-colors duration-300 ease-out px-1"
+                className="group relative text-xs uppercase tracking-widest text-text-secondary hover:text-white transition-colors duration-300 ease-out px-1"
               >
                 {skill.label}
                 <span className="absolute bg-accent-green -bottom-1 left-0 right-0 h-px scale-x-0 group-hover:scale-x-100 origin-center transition-transform duration-300" />
