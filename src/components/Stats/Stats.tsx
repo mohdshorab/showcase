@@ -16,7 +16,7 @@ const StatsBar: React.FC<StatsProps> = ({ data }) => {
       viewport={{ once: true }}
       className="max-w-portfolio mx-auto px-12 mb-20"
     >
-      <div className="grid grid-cols-2 md:grid-cols-4">
+      <div className="glass-card grid grid-cols-2 md:grid-cols-4">
         {data?.map((item) => (
           <motion.div
             variants={fadeUp}
