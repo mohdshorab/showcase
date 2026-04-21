@@ -26,11 +26,11 @@ const ProjectSection: React.FC<ProjectProps> = ({ data }) => {
           shipped.
         </span>
       </h2>
-      <div className="grid grid-cols-2 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 ">
         {data?.client?.map((project, index: number) => (
           <div
             key={project.title}
-            className={`${index == 0 || index % 3 === 0 ? "col-span-2" : ""}`}
+            className={`${index == 0 || index % 3 === 0 ? " col-span-1 md:col-span-2" : ""}`}
           >
             <WorkCard project={project} />
           </div>

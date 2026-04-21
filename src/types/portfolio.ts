@@ -23,6 +23,7 @@ export interface Project {
   technologies: string[];
   metrics?: Metric[];
   links?: ProjectLinks;
+  icon: string;
 }
 
 export interface Metric {
