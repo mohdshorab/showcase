@@ -1,7 +1,7 @@
 import type { Projects } from "../../types/portfolio";
 import { sectionReveal } from "../../utils/variants";
 import WorkCard from "./WorkCard";
-import { motion } from "framer-motion";
+import { motion } from "motion/react"
 
 type ProjectProps = {
   data: Projects;

@@ -1,4 +1,4 @@
-import { cubicBezier } from "framer-motion"
+import { cubicBezier } from "motion";
 
 const ease = cubicBezier(0.25, 0.46, 0.45, 0.94)
 

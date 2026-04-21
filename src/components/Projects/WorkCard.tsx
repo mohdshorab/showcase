@@ -8,13 +8,13 @@ type WorkCardProps = {
 const WorkCard: React.FC<WorkCardProps> = ({ project }) => {
   return (
     <div
-      className="group flex flex-row glass-card px-4 py-6 gap-4  items-center
+      className="group flex flex-row glass-card px-4 py-6 gap-4 items-stretch
       backdrop-blur-md overflow-hidden justify-between
-    hover:border-glass-border-green h-full
+      hover:border-glass-border-green h-full
       hover:-translate-y-1.5 hover:cursor-pointer 
-      hover:shadow-glow-green-subtle transition-all ease duration-300 "
+      hover:shadow-glow-green-subtle transition-all ease duration-300"
     >
-      <div className="flex flex-col gap-4">
+      <div className="flex flex-col gap-4 h-full flex-1">
         <div className="flex flex-wrap gap-4 items-center">
           {/* Stack */}
           {project?.technologies.map((tech) => (
@@ -35,7 +35,7 @@ const WorkCard: React.FC<WorkCardProps> = ({ project }) => {
           {project?.description}
         </p>
         {/* metrics */}
-        <div className="flex flex-row gap-4">
+        <div className="flex flex-row gap-4 mt-auto">
           {project?.metrics?.map((metric) => (
             <div
               key={metric.label}
@@ -54,7 +54,7 @@ const WorkCard: React.FC<WorkCardProps> = ({ project }) => {
       <img
         src={project?.icon}
         alt={project?.title}
-        className="rounded-lg max-h-48 max-w-48 object-cover"
+        className="rounded-lg max-h-48 max-w-48 object-cover self-center"
       />
     </div>
   );
