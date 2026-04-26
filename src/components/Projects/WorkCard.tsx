@@ -51,11 +51,13 @@ const WorkCard: React.FC<WorkCardProps> = ({ project }) => {
           ))}
         </div>
       </div>
-      <img
-        src={project?.icon}
-        alt={project?.title}
-        className="rounded-lg max-h-48 max-w-48 object-cover self-center"
-      />
+      {project?.icon ? (
+        <img
+          src={project?.icon}
+          alt={project?.title}
+          className="rounded-lg max-h-48 max-w-48 object-cover self-center"
+        />
+      ) : null}
     </div>
   );
 };

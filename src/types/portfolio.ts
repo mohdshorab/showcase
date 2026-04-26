@@ -1,13 +1,38 @@
-export interface Personal {
+export interface PersonalInfo {
   name: string;
   title: string;
   subtitle: string;
   tagline: string;
+  email: string;
+  phone: string;
+  location: string;
+  github: string;
+  linkedin: string;
+  yearsOfExperience: string;
   isAvailable: boolean;
 }
-export interface Stats {
-  nums: string;
+
+export interface AboutHighlight {
+  id: string;
   label: string;
+  description: string;
+  metric: string;
+}
+
+export interface About {
+  summary: string;
+  highlights: string[];
+  achievements: AboutHighlight[];
+}
+
+export interface Stat {
+  label: string;
+  nums: string;
+}
+
+export interface ProjectMetric {
+  label: string;
+  value: string;
 }
 
 export interface ProjectLinks {
@@ -21,26 +46,42 @@ export interface Project {
   description: string;
   highlights: string[];
   technologies: string[];
-  metrics?: Metric[];
+  metrics: ProjectMetric[];
+  icon?: string;
   links?: ProjectLinks;
-  icon: string;
 }
 
-export interface Metric {
-  label: string;
-  value: string;
+export interface Experience {
+  id: string;
+  company: string;
+  role: string;
+  duration: string;
+  location: string;
+  type: string;
+  techStack: string[];
 }
 
-export interface Projects {
-  client: Project[];
+export interface Education {
+  id: string;
+  institution: string;
+  degree: string;
+  duration: string;
+  cgpa: string;
+}
+
+export interface ExpertiseArea {
+  id: string;
+  title: string;
+  description: string;
+  skills: string[];
 }
 
 export interface PortfolioData {
-  personal: Personal;
-  stats: Stats[];
-  projects: Projects;
-}
-
-export interface RootPortfolio {
-  portfolio: PortfolioData;
+  personal: PersonalInfo;
+  about: About;
+  stats: Stat[];
+  projects: Project[];
+  experience: Experience[];
+  education: Education[];
+  expertise: ExpertiseArea[];
 }
